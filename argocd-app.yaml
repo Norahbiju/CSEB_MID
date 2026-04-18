@@ -8,7 +8,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/Likhi161/CSEB_MID.git
+    repoURL: https://github.com/Norahbiju/CSEB_MID.git
     targetRevision: main
     path: k8s
 
