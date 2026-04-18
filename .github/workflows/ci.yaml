@@ -63,7 +63,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 🔥 Image with SHA
+      
       - name: Set image name
         run: |
           echo "IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY,,}:${GITHUB_SHA}" >> $GITHUB_ENV
@@ -92,7 +92,7 @@ jobs:
     needs: docker
 
     environment:
-      name: production   # 🔥 MUST exist in GitHub settings
+      name: production   
 
     steps:
       - name: Approved
@@ -106,7 +106,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 🔥 Recreate IMAGE_NAME again (env is not shared between jobs)
+      
       - name: Set image name
         run: |
           echo "IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY,,}:${GITHUB_SHA}" >> $GITHUB_ENV
